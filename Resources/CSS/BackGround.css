@@ -1,3 +1,18 @@
-.bg{
-	background-image: url("/Images/Hopetoun_falls.jpg");
+
+@keyframes asdf{
+	0% , 100%{
+		color: #001F3F;
+		}
+	50%
+	{ 
+	color: #FF4136;
+	}
+}
+
+.TextBackground{
+
+    font-family: 'Coming Soon'; 
+	font-size: 64px;
+	animation: asdf 0.1s infinite;
+	
 }
