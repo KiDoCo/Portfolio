@@ -9,6 +9,16 @@
 	}
 }
 
+@keyframes rainbow{
+  0%{color: orange;}	
+  10%{color: purple;}	
+	20%{color: red;}
+	40%{color: yellow;}
+	60%{color: green;}
+	100%{color: blue;}
+	100%{color: orange;}
+}
+
 .TextBackground{
 
     font-family: 'Coming Soon'; 
@@ -16,3 +26,9 @@
 	animation: asdf 0.5s infinite;
 	
 }
+
+.Background {
+	font-size : 32px;
+	animation: rainbow 0.5s infinite;
+}
+
