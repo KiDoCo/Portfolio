@@ -23,12 +23,16 @@
 
     font-family: 'Coming Soon'; 
 	font-size: 64px;
-	animation: asdf 0.5s infinite;
+	animation: rainbow 0.5s infinite;
 	
 }
 
+body {
+	
+	background-color : black;
+}
+
 .Background {
-	font-size : 32px;
-	animation: rainbow 0.5s infinite;
+
 }
 

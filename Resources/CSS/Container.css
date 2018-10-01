@@ -1,6 +1,3 @@
-/*attribute modifications*/
-
-
 
 .container : header{
 	position : relative;
@@ -24,75 +21,191 @@ padding: 8px;
 
 }
 
-.dropdown-content > ul{
-text-align: center;
-}
-
-.dropdown-content > ul > li {
-	display: inline-block;
-	margin-left: 15px;
-	position: relative;
-}
-
-.dropdown-content > ul > li > a {
-
-    color: rgb(160,160,160);
-
-    font-family: Verdana, 'Lucida Grande';
-
-    font-size: 14px;
-
-    line-height: 70px;		/* This bit chances the size of the text on the main heading */
-
-    padding: 15px 24px;		/* This is the padding between the different titles */
-}
-
-
-/*Classes*/
-
 .container {
     position: relative;
     text-align: center;
 	background-size : cover;
 	border : 2px solid black;
 	color : #FFFFFF;
+	background-color : black;
 	background-image : url("../Images/Hopetoun_falls.jpg");
 	background-repeat : repeat-x;
 }
+ /*Container ends here*/
+ 
+#dropdown ul { margin: 0; padding: 0;}
 
-.dropdown {
-	position: relative;
-	display : inline-block;
-	float: left;
-	text-align: center;
-	cursor: pointer;
-	background-image : url("../Images/testbutton.jpg");
-	vertical-align: middle;
+#dropdown li { margin: 0; padding: 0;}
+
+#dropdown a { margin: 0; padding: 0;}
+
+#dropdown ul {list-style: none;}
+
+#dropdown a {text-decoration: none;}
+
+
+
+#dropdown {
+
+	height: 70px;			/* This is for the main menu bit at the top */
+
+	width: 100%;			/* This means on every screen no matter the size, the width will cover the top  */
+
+	line-height: normal;
 	
+	border : dashed;
+	
+	border-color : #FFFFFF;
+
+	text-align: center;
+
+	background-color: rgb(0,0,64); 
+
+	box-shadow: 0px 2px 3px rgba(0,0,0,.4);
+	
+	vertical-align: middle;
+
 }
 
-.dropdown:not(:last-child){
-		border-right: none;
+#dropdown > ul {
+    text-align:center;
 }
 
-.dropdown:after{
-	content: "";
-	clear: both;
-	display: table;
+#dropdown > ul > li {
+
+    display:inline-block;
+
+    margin-left: 15px;       
+
+    position: relative;
+
 }
 
-.dropdown-content{
-	display: none;
-	margin-left: 15px;
-	position : relative;
-	min-width: 160px;
-	box-shadow: 0px 0px 32px 0px rgba(0,0,0,0.4);
+
+
+#dropdown > ul > li > a {
+
+    color: rgb(0,160,30);
+
+    font-family: 'Coming Soon', 'Lucida Grande';
+
+    font-size: 14px;
+
+    line-height: 70px;		/* This bit chances the size of the text on the main heading */
+
+    padding: 128px 64px;		/* This is the padding between the different titles */
+
+    transition: color .15s;
+
 }
 
-.dropdown:hover .dropdown-content{
-	display: inline-block;
-    background-color: #FFFFFF;
+#dropdown > ul ul > li > a > span {
+	
+	color : rgb(255,255,0);
+	font-size : 16px;
 }
+
+#dropdown > ul > li > a:hover {color: rgb(0,255,0); }
+
+#dropdown > ul > li > ul {
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    padding: 16px 0 20px 0;
+
+    background-color: rgb(250,250,250);
+
+    text-align: left;  /* This is for the text when box is dropped down, centered isnt always totally in the middle so best to have on the left */
+
+    position: absolute;
+
+    top: 55px;			/* This is for the drop down annimation */
+
+    left: 50%;
+
+    margin-left: -90px;
+
+    width: 180px;
+
+	transition: all .3s .1s;
+	
+	border-radius: 5px;
+	
+    box-shadow: 6px 6px 1px rgba(0,0,255,.4);
+
+}
+
+
+
+#dropdown > ul > li:hover > ul {
+
+    opacity: 1;
+
+    top: 65px;	
+
+	background-color : rgba(0,0,0,255);	
+
+    visibility: visible;
+
+}
+
+
+
+#dropdown > ul > li > ul:before{
+
+    content: '';
+
+    display: block;
+
+    border-width: 15px;  
+
+    position: absolute;
+
+    top: -50px;
+
+    left: 50%;
+
+    margin-left: -10px;
+
+}
+
+
+
+#dropdown > ul  ul > li { 
+position: relative;
+	border : dotted;
+	border-radius : 2px;
+	border-color : 0000FF
+}
+
+#dropdown > ul  ul  {
+
+}
+
+
+
+#dropdown ul ul > li{     /* This is the drop down menu, change font or size when its drops down */
+
+    color: rgb(255,0,0);
+
+    font-family: Verdana, 'Lucida Grande';
+
+    font-size: 13px;   
+
+
+    padding: 5px 8px 7px 16px;
+
+    display: block;
+
+
+    transition: background-color .1s;
+
+}
+
+
+
 
 .bottom-left {
     position: absolute;
@@ -123,7 +236,6 @@ position : absolute;
 top: 15%;
 left: 0%;
 }
-
 
 .centered {
     position: absolute;
