@@ -81,13 +81,9 @@ padding: 8px;
 
 }
 
-
-
 #dropdown > ul > li > a {
 
-    color: rgb(0,160,30);
-
-    font-family: 'Coming Soon', 'Lucida Grande';
+    color: rgb(255,160,30);
 
     font-size: 14px;
 
@@ -172,14 +168,6 @@ padding: 8px;
 }
 
 
-
-#dropdown > ul  ul > li { 
-position: relative;
-	border : dotted;
-	border-radius : 2px;
-	border-color : 0000FF
-}
-
 #dropdown > ul  ul  {
 
 }
@@ -187,6 +175,8 @@ position: relative;
 
 
 #dropdown ul ul > li{     /* This is the drop down menu, change font or size when its drops down */
+
+
 
     color: rgb(255,0,0);
 
@@ -199,7 +189,10 @@ position: relative;
 
     display: block;
 
-
+position: relative;
+	border : dotted;
+	border-radius : 2px;
+	border-color : 0000FF
     transition: background-color .1s;
 
 }
