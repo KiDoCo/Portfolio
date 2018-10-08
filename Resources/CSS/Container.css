@@ -53,7 +53,7 @@ padding: 8px;
 
 	line-height: normal;
 	
-	border : dashed;
+	border : solid;
 	
 	border-color : #FFFFFF;
 
@@ -89,7 +89,7 @@ padding: 8px;
 
     line-height: 70px;		/* This bit chances the size of the text on the main heading */
 
-    padding: 128px 64px;		/* This is the padding between the different titles */
+    padding: 16px 32px;		/* This is the padding between the different titles */
 
     transition: color .15s;
 
