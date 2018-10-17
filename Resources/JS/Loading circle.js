@@ -1,4 +1,4 @@
-var canvas =	document.getElementById("glcanvas");
+var canvas = document.getElementById("glcanvas");
 const gl = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
