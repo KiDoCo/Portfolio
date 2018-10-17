@@ -8,29 +8,6 @@ var x = 40;
 var y = 50;
 var startx = 0;
 
-function readTextFile(file)
-{
-	var rawFile = new XMLHttpRequest();
-	rawFile.open("GET",file,false);
-	rawFile.onreadystatechange = function()
-	{
-		if(rawFile.readyState == 4)
-		{
-			if(rawFile.status === 200 || rawFile.status == 0)
-			{
-				var allText = rawFile.responseText;
-				var para = document.createElement("p");
-				var node = document.createTextNode(allText);
-				para.appendChild(node);
-				var element = document.getElementById("test");
-				element.appendChild(para);
-			}
-		}
-	}
-	rawFile.send(null);
-}
-$('#test').load("https://drive.google.com/uc?export=view&id=1lf-0t0x2F1JPqp33PZOQGiQDDewB-8p8");
-
 function main()
 {	
 	//readTextFile("../Text/soos.xml");

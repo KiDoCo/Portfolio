@@ -22,9 +22,7 @@
 .TextBackground{
 
     font-family: 'Coming Soon'; 
-	font-size: 64px;
 	animation: rainbow 0.5s infinite;
-	
 }
 
 body {
