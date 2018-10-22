@@ -56,9 +56,9 @@ color : red;
 
 	top : 0;
 	font-family: Verdana;
-	height: 70px;			/* This is for the main menu bit at the top */
+	height: 70px;			
 
-	width: 100%;			/* This means on every screen no matter the size, the width will cover the top  */
+	width: 100%;			
 
 	line-height: normal;
 	
@@ -111,12 +111,11 @@ color : red;
 	font-size : 16px;
 }
 
-#dropdown > ul ul > li > a > span:hover {
-	
-	color : #00FF00;
-}
+#dropdown > ul ul > li > a > span:hover {color : #00FF00;}
 
 #dropdown > ul > li > a:hover {color: #00FF00; }
+
+#dropdown > ul > li > a { text-decoration : none;}
 
 #dropdown > ul > li > ul {
 
@@ -147,8 +146,6 @@ color : red;
     box-shadow: 2px 1px 1px #0000FF56;
 
 }
-
-
 
 #dropdown > ul > li:hover > ul {
 
@@ -182,18 +179,9 @@ color : red;
 
 }
 
+#dropdown ul ul > li{     
 
-#dropdown > ul  ul  {
-
-}
-
-
-
-#dropdown ul ul > li{     /* This is the drop down menu, change font or size when its drops down */
-
-
-
-    color: rgb(255,0,0);
+    color: #FF0000;
 
     font-family: Verdana, 'Lucida Grande';
 
@@ -209,42 +197,4 @@ color : red;
 
 }
 
-
-
-
-.bottom-left {
-    position: absolute;
-    bottom: 8px;
-    left: 16px;
-}
-
-.top-left {
-    position: absolute;
-    top: 8px;
-    left: 16px;
-}
-
-.top-right {
-    position: absolute;
-    top: 8px;
-    right: 16px;
-}
-
-.bottom-right {
-    position: absolute;
-    bottom: 8px;
-    right: 16px;
-}
-
-.mid-left {
-position : absolute;
-top: 15%;
-left: 0%;
-}
-
-.centered {
-    position: absolute;
-    top: 15%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+#dropdown > ul ul > li > a { text-decoration : none;}
