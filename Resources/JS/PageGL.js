@@ -1,9 +1,12 @@
 var camera, scene, renderer;
 var geometry, material, mesh;
-
-var canvas = document.getElementsByClassName("glcontainer");
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+var startx = 0;
+var test;
+var increase = false;
+var boxarray = [];
+var canvas = document.getElementById("glcontainer");
+canvas.style.width = window.innerWidth + "px";
+canvas.style.height = window.innerHeight + "px";
 var style = 16;
 var initvalue = parseFloat(style);
 $("span").css("font-size" ,(initvalue + window.innerWidth / 150) + 'px');
@@ -59,23 +62,33 @@ $(window).resize(function()
 function init()
 {
 	camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 0.01, 10 );
-	camera.position.z = 1;
+	camera.position.z = 4;
 
 	scene = new THREE.Scene();
 
 	geometry = new THREE.BoxGeometry( 0.2, 0.2, 0.2 );
 	material = new THREE.MeshNormalMaterial();
-
-	mesh = new THREE.Mesh( geometry, material );
+	
+	//K starts here
+	
+	for(var i = 0; i < 5; i++)
+	{
+		boxarray[i] = new THREE.BoxGeometry(0.2,0.2,0.2);
+	}
+	
+	
+	var a = new THREE.Vector2(1.0,1.0);
+	var b = new THREE.Vector2(40.0,40.0);
+	test = new THREE.LineCurve(a ,b );
+	mesh = new THREE.Mesh( geometry, material );	
 	scene.add( mesh );
 
 
 	renderer = new THREE.WebGLRenderer( { antialias: true } );
 
-	renderer.setSize( window.innerWidth, window.innerHeight );
-	$(".glcontainer").append(renderer);
-
-
+	renderer.setSize( window.innerWidth, window.innerHeight );		
+	
+	canvas.appendChild(renderer.domElement);
 }
 
 
@@ -84,8 +97,26 @@ function render()
 
 	requestAnimationFrame( render );
 
-	mesh.rotation.x += 0.01;
-	mesh.rotation.y += 0.02;
+
+	if(startx < -1.0)
+	{
+		increase = true;
+	}
+	
+	if(startx > 1.0)
+	{
+		increase = false;
+	}
+	
+	if(increase)
+	{
+		startx += 0.01;
+	}
+	else
+	{
+		startx -= 0.01;
+	}
+	
 
 	renderer.render( scene, camera );
 
