@@ -1,7 +1,7 @@
 var camera, scene, renderer;
 var geometry, material, mesh;
+var Kmesh;
 var startx = 0;
-var test;
 var increase = false;
 var boxarray = [];
 var canvas = document.getElementById("glcontainer");
@@ -70,21 +70,59 @@ function init()
 	material = new THREE.MeshNormalMaterial();
 	
 	//K starts here
-	
-	for(var i = 0; i < 5; i++)
+	var car = new THREE.BufferGeometry();
+
+var vertices = [];
+
+	var indices = []; 
+	var segments = 9;
+	var size = 20;
+	var halfSize = size / 2;
+	var ass = new THREE.BufferGeometry();
+	var segmentSize = size / segments;
+
+	for ( var i = 0; i <= segments; i ++ ) 
 	{
-		boxarray[i] = new THREE.BoxGeometry(0.2,0.2,0.2);
+		var y = ( i * segmentSize ) - halfSize;
+				
+		for ( var j = 0; j <= segments; j ++ )
+		{
+			var x = ( j * segmentSize ) - halfSize;
+			vertices.push( x, - y, 0 );
+			normals.push( 0, 0, 1 );
+			var r = ( x / size ) + 0.5;
+			var g = ( y / size ) + 0.5;
+			colors.push( r, g, 1 );
+		}
 	}
+
+					for ( var i = 0; i <= segments; i ++ ) {
+					var y = ( i * segmentSize ) - halfSize;
+					for ( var j = 0; j <= segments; j ++ ) {
+						var x = ( j * segmentSize ) - halfSize;
+						vertices.push( x, - y, 0 );
+						normals.push( 0, 0, 1 );
+						var r = ( x / size ) + 0.5;
+						var g = ( y / size ) + 0.5;
+						colors.push( r, g, 1 );
+					}
+				}
+
+	ass.setIndex(indices);
+				geometry.addAttribute( 'position', new THREE.Float32BufferAttribute( vertices, 3 ) );
+				geometry.addAttribute( 'normal', new THREE.Float32BufferAttribute( normals, 3 ) );
+				geometry.addAttribute( 'color', new THREE.Float32BufferAttribute( colors, 3 ) );
+
+	car.addAttribute('position', new THREE.BufferAttribute( vertices, 3));
+	var arr = new THREE.MeshBasicMaterial({color : 0xff0000});
+	Kmesh = new THREE.Mesh(ass, arr);
+
 	
-	
-	var a = new THREE.Vector2(1.0,1.0);
-	var b = new THREE.Vector2(40.0,40.0);
-	test = new THREE.LineCurve(a ,b );
 	mesh = new THREE.Mesh( geometry, material );	
-	scene.add( mesh );
+	scene.add( Kmesh );
+	scene.add (mesh);
 
-
-	renderer = new THREE.WebGLRenderer( { antialias: true } );
+	renderer = new THREE.WebGLRenderer( { antialias: false } );
 
 	renderer.setSize( window.innerWidth, window.innerHeight );		
 	
@@ -96,7 +134,10 @@ function render()
 {
 
 	requestAnimationFrame( render );
+	mesh.rotation.x += 0.01;
+	mesh.rotation.y += 0.01;
 
+	Kmesh.rotation.x += 0.01;
 
 	if(startx < -1.0)
 	{

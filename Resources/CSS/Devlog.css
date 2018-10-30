@@ -1,4 +1,10 @@
 
 h1 {
-	
+	color: Green;
+	font-size: 64px;
+}
+
+span {
+	color: Red;
+	font-size: 32px;
 }
