@@ -73,7 +73,7 @@ function init()
 	var car = new THREE.BufferGeometry();
 
 var vertices = [];
-
+	var normals = [];
 	var indices = []; 
 	var segments = 9;
 	var size = 20;
