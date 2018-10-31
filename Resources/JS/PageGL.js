@@ -72,7 +72,7 @@ function init()
 	//K starts here
 	var car = new THREE.BufferGeometry();
 
-var vertices = [];
+	var vertices = [];
 	var normals = [];
 	var indices = []; 
 	var colors = [];
@@ -110,9 +110,9 @@ var vertices = [];
 				}
 
 	ass.setIndex(indices);
-				geometry.addAttribute( 'position', new THREE.Float32BufferAttribute( vertices, 3 ) );
-				geometry.addAttribute( 'normal', new THREE.Float32BufferAttribute( normals, 3 ) );
-				geometry.addAttribute( 'color', new THREE.Float32BufferAttribute( colors, 3 ) );
+				car.addAttribute( 'position', new THREE.Float32BufferAttribute( vertices, 3 ) );
+				car.addAttribute( 'normal', new THREE.Float32BufferAttribute( normals, 3 ) );
+				car.addAttribute( 'color', new THREE.Float32BufferAttribute( colors, 3 ) );
 
 	car.addAttribute('position', new THREE.BufferAttribute( vertices, 3));
 	var arr = new THREE.MeshBasicMaterial({color : 0xff0000});
