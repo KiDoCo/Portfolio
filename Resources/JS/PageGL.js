@@ -72,10 +72,10 @@ function init()
 	//K starts here
 	var car = new THREE.BufferGeometry();
 
-	var vertices = THREE.Float32[];
-	var normals = THREE.Float32[];
+	var vertices = THREE.Float[];
+	var normals = THREE.Float[];
 	var indices = []; 
-	var colors = THREE.Float32[];
+	var colors = THREE.Float[];
 	var segments = 9;
 	var size = 20;
 	var halfSize = size / 2;
