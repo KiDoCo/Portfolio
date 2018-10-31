@@ -75,6 +75,7 @@ function init()
 var vertices = [];
 	var normals = [];
 	var indices = []; 
+	var colors = [];
 	var segments = 9;
 	var size = 20;
 	var halfSize = size / 2;
