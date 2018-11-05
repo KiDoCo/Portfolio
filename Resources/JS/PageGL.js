@@ -1,6 +1,5 @@
 var camera, scene, renderer;
 var geometry, material, mesh;
-var Kmesh;
 var startx = 0;
 var increase = false;
 var boxarray = [];
@@ -59,73 +58,26 @@ $(window).resize(function()
 
 });
 
+
+
 function init()
 {
-	camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 0.01, 10 );
-	camera.position.z = 4;
+	renderer = new THREE.WebGLRenderer();
+	camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.01, 1000 );
+	camera.position.z = 27;
 
+
+	var light = new THREE.PointLight( 0xffffff);
+	light.position.copy(camera.position);
+
+
+	mesh = new THREE.Mesh(geometry, new THREE.MeshBasicMaterial({color: 0x00ffff}));
 	scene = new THREE.Scene();
 
-	geometry = new THREE.BoxGeometry( 0.2, 0.2, 0.2 );
-	material = new THREE.MeshNormalMaterial();
-	
-	//K starts here
-	var car = new THREE.BufferGeometry();
+	scene.add(mesh);
 
-	var vertices = new Float32Array([]);
-	var normals =  new Float32Array([]);
-	var indices = []; 
-	var colors =  new Float32Array([]);
-	var segments = 9;
-	var size = 20;
-	var halfSize = size / 2;
-	var ass = new THREE.BufferGeometry();
-	var segmentSize = size / segments;
+	renderer.setSize( window.innerWidth, window.innerHeight );	
 
-	for ( var i = 0; i <= segments; i ++ ) 
-	{
-		var y = ( i * segmentSize ) - halfSize;
-				
-		for ( var j = 0; j <= segments; j ++ )
-		{
-			var x = ( j * segmentSize ) - halfSize;
-			vertices.push( x, - y, 0 );
-			normals.push( 0, 0, 1 );
-			var r = ( x / size ) + 0.5;
-			var g = ( y / size ) + 0.5;
-			colors.push( r, g, 1 );
-		}
-	}
-
-					for ( var i = 0; i <= segments; i ++ ) {
-					var y = ( i * segmentSize ) - halfSize;
-					for ( var j = 0; j <= segments; j ++ ) {
-						var x = ( j * segmentSize ) - halfSize;
-						vertices.push( x, - y, 0 );
-						normals.push( 0, 0, 1 );
-						var r = ( x / size ) + 0.5;
-						var g = ( y / size ) + 0.5;
-						colors.push( r, g, 1 );
-					}
-				}
-
-	ass.setIndex(indices);
-				car.addAttribute( 'position', new THREE.Float32BufferAttribute( vertices, 3 ) );
-				car.addAttribute( 'normal', new THREE.Float32BufferAttribute( normals, 3 ) );
-				car.addAttribute( 'color', new THREE.Float32BufferAttribute( colors, 3 ) );
-
-	car.addAttribute('position', new THREE.BufferAttribute( vertices, 3));
-	var arr = new THREE.MeshBasicMaterial({color : 0xff0000});
-	Kmesh = new THREE.Mesh(ass, arr);
-
-	
-	mesh = new THREE.Mesh( geometry, material );	
-	scene.add( Kmesh );
-	scene.add (mesh);
-
-	renderer = new THREE.WebGLRenderer( { antialias: false } );
-
-	renderer.setSize( window.innerWidth, window.innerHeight );		
 	
 	canvas.appendChild(renderer.domElement);
 }
@@ -133,12 +85,7 @@ function init()
 
 function render()
 {
-
 	requestAnimationFrame( render );
-	mesh.rotation.x += 0.01;
-	mesh.rotation.y += 0.01;
-
-	Kmesh.rotation.x += 0.01;
 
 	if(startx < -1.0)
 	{
