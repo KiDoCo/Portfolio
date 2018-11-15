@@ -46,6 +46,7 @@ $(window).resize(function()
 {
 	canvas.height = window.innerHeight;
 	canvas.width = window.innerWidth;
+	document.getElementById("dropdown").width = window.innerWidth;
 	//Calculate the font size
 	if((initvalue + window.innerWidth /150) <= 32)
 	{
@@ -53,7 +54,7 @@ $(window).resize(function()
 	}
 	else
 	{
-		$('span').css("font-size" , 32 + 'px');
+		$('span').css("font-size" , 24 + 'px');
 	}
 
 });
