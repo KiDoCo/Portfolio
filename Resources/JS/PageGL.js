@@ -69,6 +69,7 @@ function K()
 		new THREE.Vector3(-5,20,0), //mid left 0
 		new THREE.Vector3(-5,-10,0), //down left 1
 		new THREE.Vector3(10,-10,0), //down right 2
+		
 		new THREE.Vector3(10,20,0),  //mid right 3
 		new THREE.Vector3(10,50,0),	 //Top right 4
 		new THREE.Vector3(-5,50,0),  //top left 5
@@ -76,10 +77,31 @@ function K()
 		new THREE.Vector3(30,50,0), //top 6
 		new THREE.Vector3(40,50,0), //top 7
 		new THREE.Vector3(20,20,0),  //mid 8
+		
 		new THREE.Vector3(40,-10,0), //down 9
 		new THREE.Vector3(30,-10,0),  //down 10
-		new THREE.Vector3(10,25,0),
-		new THREE.Vector3(10,15,0)
+		new THREE.Vector3(10,25,0),   //mid section 11
+		
+		new THREE.Vector3(10,15,0),   //12
+		
+				//backface
+		new THREE.Vector3(-5,20,5), //mid left 13
+		new THREE.Vector3(-5,-10,5), //down left 14
+		new THREE.Vector3(10,-10,5), //down right 15
+		
+		new THREE.Vector3(10,20,5),  //mid right 16
+		new THREE.Vector3(10,50,5),	//Top right 17
+		new THREE.Vector3(-5,50,5),  //top left 18
+		//two side palliki
+		new THREE.Vector3(30,50,5), //top 19
+		new THREE.Vector3(40,50,5), //top 20
+		new THREE.Vector3(20,20,5),  //mid 21
+		
+		new THREE.Vector3(40,-10,5), //down 22
+		new THREE.Vector3(30,-10,5),  //down 23
+		new THREE.Vector3(10,25,5),   //mid section 24
+		
+		new THREE.Vector3(10,15,5)		//25
 	);
 
 	geometry.faces.push
@@ -97,7 +119,20 @@ function K()
 		new THREE.Face3(7,6,8),
 
 		new THREE.Face3(10,9,8), //down
-		new THREE.Face3(8,12,10)
+		new THREE.Face3(8,12,10),
+		//backface
+		//backside
+		new THREE.Face3(1,14,13),
+		new THREE.Face3(13,0,1),
+		new THREE.Face3(13,18,5),
+		new THREE.Face3(18,5,0),
+		new THREE.Face3(17,18,5),
+		new THREE.Face3(5,4,17),
+		new THREE.Face3(17,18,5),
+		new THREE.Face3(11,24,18),
+		new THREE.Face3(18,5,11)
+
+		
 	);
 
 	geometry.computeBoundingSphere();
@@ -156,7 +191,7 @@ function init()
 	camera.position.y = 30;
 
 
-	mesh = new THREE.Mesh(i(), new THREE.MeshBasicMaterial({color: 0x00ffff}));
+	mesh = new THREE.Mesh(K(), new THREE.MeshBasicMaterial({color: 0x00ffff}));
 	scene = new THREE.Scene();
 
 	scene.add(mesh);
@@ -171,7 +206,7 @@ function init()
 function render()
 {
 	requestAnimationFrame( render );
-	mesh.rotation.z = startx;
+	mesh.rotation.y = startx;
 	if(startx < -1.0)
 	{
 		increase = true;
