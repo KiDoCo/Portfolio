@@ -26,16 +26,9 @@
 	position : relative;
 }
 
-#bleh
-{
-	font-size : 24px;
-}
+footer {
+	text-align: center;
 
-#test {
-text-align: center;
-font-size: 48px;
-position:relative;
-color : red;
 }
  
 #dropdown ul { margin: 0; padding: 0; list-style: none;}
@@ -45,14 +38,6 @@ color : red;
 #dropdown a { margin: 0; padding: 0;text-decoration: none;}
 
 
-
-#container1
-{
-  bottom:0;
-  left :0;
-  position: absolute;
-  width: 100%;
-}
 #dropdown {
 
 	top : 0;
@@ -104,7 +89,7 @@ color : red;
 
     line-height: 70px;		/* This bit chances the size of the text on the main heading */
 
-    padding: 16px 32px;		/* This is the padding between the different titles */
+    padding:  6px 32px;		/* This is the padding between the different titles */
 
     transition: color .15s;
 
@@ -113,6 +98,7 @@ color : red;
 #dropdown > ul ul > li > a > span {
 	
 	color : #008400;
+	font-size: 2px;
 }
 
 #dropdown > ul ul > li > a > span:hover {color : #00FF00;}
@@ -131,7 +117,7 @@ color : red;
 
     background-color: #0000FF;
 
-    text-align: middle;  
+    text-align: left;  
 
     position: absolute;
 
@@ -145,7 +131,7 @@ color : red;
 
 	transition: all .4s .2s;
 	
-	border-radius: 10px;
+	border-radius: 5px;
 	
     box-shadow: 2px 1px 1px #0000FF56;
 
@@ -188,8 +174,6 @@ color : red;
     color: #FF0000;
 
     font-family: Verdana, 'Lucida Grande';
-
-
 
     padding: 5px 8px 7px 16px;
 
