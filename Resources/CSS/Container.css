@@ -8,7 +8,10 @@
 	height: 10%;
 	
 }
- 
+titles
+{
+	display : none;
+}
 .container {
     position: relative;
     text-align: center;
