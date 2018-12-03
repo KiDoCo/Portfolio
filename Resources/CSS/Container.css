@@ -9,15 +9,26 @@
 	
 }
 /*Universal elements */
-titles
-{
-	display : none;
-}
+
 
 footer {
 	text-align: center;
 
 }
+
+body {
+	
+	background-color : black;
+}
+
+
+.TextBackground{
+
+    font-family: 'Coming Soon'; 
+	animation: rainbow 0.5s infinite;
+}
+
+
 
 
 
@@ -33,13 +44,26 @@ footer {
 }
  
 .glcontainer{
-	height:100%;
-	width:100%;
+
+
 	position : relative;
 }
 
+.pagecontentgrid{
+	position: absolute;
+	display: grid;
+	grid-column-gap: 50px;
+	grid-template-columns: 4vw auto  4vw;
+	grid-template-rows: 25% 100px auto;
+}
 
-
+#textWindow{
+	background-color: #11111122;
+	grid-column-start: 3;
+	grid-column-end: 6;
+	grid-row-start: 2;
+	grid-row-end: 2;
+}
 
  
 #dropdown ul { margin: 0; padding: 0; list-style: none;}
@@ -50,29 +74,29 @@ footer {
 
 #dropdown {
 
-	top : 0;
 	font-family: Verdana;
-	height: 75px;			
-	
-	font-size : 32px;
-	width: 100%;			
+	height: 75px;
+	background-color: #000000; 
+	box-shadow: 0px 1px 1.5px rgba(0,0,0,.2);
 
+	/*Grid settings */			
+	grid-column-start: 6;
+	grid-column-end: 12;
+	grid-row-start: 1;
+	grid-row-end: 1;
+
+	/* Text settings*/		
+	font-size : 32px;	
 	line-height: normal;
-	
-	border : solid;
-	
-	border-color : #0000FF;
-
-	border-bottom : none;
 	text-align: center;
 
-	background-color: #000000; 
+	/*Border settings */
+	border : solid;
+	border-color : #0000FF;
+	border-bottom : none;
+	border-right: none;
+	border-left: none;
 
-	box-shadow: 0px 1px 1.5px rgba(0,0,0,.2);
-	
-	vertical-align: middle;
-
-	position : absolute;
 }
 
 #dropdown > ul {
@@ -143,17 +167,17 @@ footer {
 
     position: absolute;
 
-    top: 75px;		
+    top: 60px;		
 
-    left: 50%;
+    left: 5vw;
 
-    margin-left: -90px;
+    margin-left: -6vw;
 
-    width: 180px;
+    width: 14vw;
 
-	transition: all .4s .2s;
+	transition: all .6s .2s;
 	
-	border-radius: 5px;
+	border-radius: 10px;
 	
     box-shadow: 2px 1px 1px #0000FF56;
 
@@ -163,7 +187,7 @@ footer {
 
     opacity: 1;
 
-    top: 65px;	
+    top: 80px;	
 
 	background-color : #000000;
 
@@ -179,7 +203,6 @@ footer {
 
     border-width: 15px;  
 
-    position: absolute;
 
     top: -50px;
 
@@ -206,9 +229,23 @@ footer {
 
 #dropdown > ul ul > li > a { text-decoration : none;}
 
-#textWindow{
-	background-color: #11111122;
-	position: absolute;
-	left: 40vw;
-	top: 20vw;
+
+@keyframes asdf{
+	0% , 100%{
+		color: #001F3F;
+		}
+	50%
+	{ 
+	color: #FF4136;
+	}
+}
+
+@keyframes rainbow{
+  0%{color: orange;}	
+  10%{color: purple;}	
+	20%{color: red;}
+	40%{color: yellow;}
+	60%{color: green;}
+	100%{color: blue;}
+	100%{color: orange;}
 }

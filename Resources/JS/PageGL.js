@@ -3,11 +3,9 @@ var geometry, material, mesh;
 var startx = 0;
 var increase = false;
 var boxarray = [];
-var canvas = document.getElementById("glcontainer");
-canvas.style.width = window.innerWidth + "px";
-canvas.style.height = window.innerHeight + "px";
 var style = 16;
 var initvalue = parseFloat(style);
+var canvas = document.getElementsByClassName("glcontainer");
 init();
 render();
 
@@ -40,14 +38,12 @@ $("#test").html(result);
 
 //$('#test').load("../Text/bleh.txt");
 
+
 //event when resizes occurs
 $(window).resize(function()
 {
-	canvas.height = window.innerHeight;
-	canvas.width = window.innerWidth;
-	document.getElementById("dropdown").width = window.innerWidth;
-
-
+	canvas[0].height = window.innerHeight;
+	canvas[0].width = window.innerWidth;
 });
 
 function K()
@@ -168,7 +164,7 @@ function init()
 	renderer.setSize( window.innerWidth, window.innerHeight );	
 
 	
-	canvas.appendChild(renderer.domElement);
+	canvas[0].appendChild(renderer.domElement);
 }
 
 
