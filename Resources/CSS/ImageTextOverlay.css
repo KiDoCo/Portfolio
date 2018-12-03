@@ -1,9 +1,8 @@
- * {
-	 font-family : Helvetica, Arial, sans-serif;
-   }
-   
+ 
    h1 {
-	   color: SeaGreen;
+	   background: -webkit-linear-gradient(280deg,#00FF00,#000018);
+	   -webkit-background-clip:text;
+	   -webkit-text-fill-color: transparent;
    }
    
    p
@@ -14,3 +13,4 @@
    a{
 	   text-decoration: none;
    }
+   

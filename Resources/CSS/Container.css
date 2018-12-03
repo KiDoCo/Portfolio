@@ -8,15 +8,24 @@
 	height: 10%;
 	
 }
+/*Universal elements */
 titles
 {
 	display : none;
 }
+
+footer {
+	text-align: center;
+
+}
+
+
+
 .container {
     position: relative;
     text-align: center;
 	background-size : cover;
-	border : 2px solid black;
+	border : 1px solid black;
 	color : #000000;
 	background-color : black;
 	background-image : url("../Images/Hopetoun_falls.jpg");
@@ -29,17 +38,15 @@ titles
 	position : relative;
 }
 
-footer {
-	text-align: center;
 
-}
+
+
  
 #dropdown ul { margin: 0; padding: 0; list-style: none;}
 
 #dropdown li { margin: 0; padding: 0;}
 
 #dropdown a { margin: 0; padding: 0;text-decoration: none;}
-
 
 #dropdown {
 
@@ -54,11 +61,12 @@ footer {
 	
 	border : solid;
 	
-	border-color : #FFFFFF;
+	border-color : #0000FF;
 
+	border-bottom : none;
 	text-align: center;
 
-	background-color: #000054; 
+	background-color: #000000; 
 
 	box-shadow: 0px 1px 1.5px rgba(0,0,0,.2);
 	
@@ -87,8 +95,11 @@ footer {
 
 #dropdown > ul > li > a {
 
-    color: rgb(0,160,30);
-
+	background: -webkit-linear-gradient(280deg,#00FF00,#000056);
+	
+	-webkit-background-clip:text;
+	
+	-webkit-text-fill-color: transparent;
 
     line-height: 70px;		/* This bit chances the size of the text on the main heading */
 
@@ -99,26 +110,34 @@ footer {
 }
 
 #dropdown > ul ul > li > a > span {
-	
-	color : #008400;
-	font-size: 2px;
+	background: -webkit-linear-gradient(280deg,#00FF00,#000018);
+	-webkit-background-clip:text;
+	-webkit-text-fill-color: transparent;
+	font-size: 26px;
+	overflow:hidden;
+	white-space: nowrap;
 }
 
-#dropdown > ul ul > li > a > span:hover {color : #00FF00;}
+#dropdown > ul ul > li > a > span:hover 
+{
+	background: -webkit-linear-gradient(280deg,#00FF00,#00FF00);
+	-webkit-background-clip:text;
+	-webkit-text-fill-color: transparent;
+}
 
 #dropdown > ul > li > a:hover {color: #00FF00; }
 
 #dropdown > ul > li > a { text-decoration : none;}
 
-#dropdown > ul > li > ul {
+#dropdown > ul > li > ul { /*Dropdown effect window */
 
     opacity: 0;
 
     visibility: hidden;
 
-    padding: 5px 0 5px 0;
+    padding: 2px 0 2px 0;
 
-    background-color: #0000FF;
+    background-color: #000000;
 
     text-align: left;  
 
@@ -152,8 +171,6 @@ footer {
 
 }
 
-
-
 #dropdown > ul > li > ul:before{
 
     content: '';
@@ -174,11 +191,11 @@ footer {
 
 #dropdown ul ul > li{     
 
-    color: #FF0000;
-
     font-family: Verdana, 'Lucida Grande';
 
-    padding: 5px 8px 7px 16px;
+	font-size : 16px;
+	
+    padding: 16px 4px 16px 4px;
 
     display: block;
 
@@ -188,3 +205,10 @@ footer {
 }
 
 #dropdown > ul ul > li > a { text-decoration : none;}
+
+#textWindow{
+	background-color: #11111122;
+	position: absolute;
+	left: 40vw;
+	top: 20vw;
+}

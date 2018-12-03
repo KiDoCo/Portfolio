@@ -24,7 +24,7 @@ function getLocation()
 	}
 	else
 	{
-		x.innerHTML = "Fuck off";
+		x.innerHTML = "U browser no support geo, plz gime munnie";
 		return false;
 	}
 }
