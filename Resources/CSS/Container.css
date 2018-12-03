@@ -28,12 +28,7 @@ body {
 	animation: rainbow 0.5s infinite;
 }
 
-
-
-
-
 .container {
-    position: relative;
     text-align: center;
 	background-size : cover;
 	border : 1px solid black;
@@ -45,14 +40,13 @@ body {
  
 .glcontainer{
 
-
+	overflow-x: hidden;
 	position : relative;
 }
 
 .pagecontentgrid{
 	position: absolute;
 	display: grid;
-	grid-column-gap: 50px;
 	grid-template-columns: 4vw auto  4vw;
 	grid-template-rows: 25% 100px auto;
 }
@@ -60,9 +54,9 @@ body {
 #textWindow{
 	background-color: #11111122;
 	grid-column-start: 3;
-	grid-column-end: 6;
-	grid-row-start: 2;
-	grid-row-end: 2;
+	grid-column-end: 24;
+	grid-row-start: 3;
+	grid-row-end: 9;
 }
 
  
@@ -78,10 +72,10 @@ body {
 	height: 75px;
 	background-color: #000000; 
 	box-shadow: 0px 1px 1.5px rgba(0,0,0,.2);
-
+	margin: auto;
 	/*Grid settings */			
-	grid-column-start: 6;
-	grid-column-end: 12;
+	grid-column-start: 2;
+	grid-column-end: 2;
 	grid-row-start: 1;
 	grid-row-end: 1;
 
@@ -202,7 +196,6 @@ body {
     display: block;
 
     border-width: 15px;  
-
 
     top: -50px;
 
