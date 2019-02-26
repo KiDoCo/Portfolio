@@ -46,17 +46,19 @@ body {
 
 .pagecontentgrid{
 	position: absolute;
-	display: grid;
-	grid-template-columns: 4vw auto  4vw;
-	grid-template-rows: 25% 100px auto;
+	display: grid; /* one percent */
+	grid-template-columns: 5vh 10vh 20vh 30vh 20vh 10vh 5vh; /* 7*/
+	grid-template-rows: 0vw 5vw  35vw 20vw 35vw  5vw 0vw;
+	background: rgba(114,186,94,0.1);
+
 }
 
 #textWindow{
 	background-color: #11111122;
 	grid-column-start: 3;
-	grid-column-end: 24;
+	grid-column-end: 5;
 	grid-row-start: 3;
-	grid-row-end: 9;
+	grid-row-end: 5;
 }
 
  
@@ -74,11 +76,10 @@ body {
 	box-shadow: 0px 1px 1.5px rgba(0,0,0,.2);
 	margin: auto;
 	/*Grid settings */			
-	grid-column-start: 2;
-	grid-column-end: 2;
+	grid-column-start: 5;
+	grid-column-end: 10;
 	grid-row-start: 1;
-	grid-row-end: 1;
-
+	grid-row-end: 2;
 	/* Text settings*/		
 	font-size : 32px;	
 	line-height: normal;
