@@ -1,25 +1,25 @@
-#MorMor {
+.MorMor  {
 	
-	position:relative;
-	width: 100%;
-	height : 192px;
-	background-color: #000000;
+	grid-row-start: 3;
+	grid-row-end : 4;
+	grid-column-start : 3;
+	grid-column-end: 5;
+
+	background-color: #005500;
 }
 
-#MorMor > table{
-	vertical-align: middle;
-	width: 100%;
-	box-shadow: 2px 3px #FFFF00;
+#XD
+{
+	width: 50vw;
+	height: 50vh;
 }
 
 #MorMor  table  tr {
 	text-align: center;
 	color : #FF0000;
 }
-#XD {
-	width: 400px;
-	height: 400px;
-}
+
+
 #div1,#div2{
 
 float:left;

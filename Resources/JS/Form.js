@@ -1,5 +1,4 @@
 
-var x = document.getElementById("XD");
 
 function validateForm()
 {
@@ -17,6 +16,7 @@ function validateForm()
 
 function getLocation()
 {
+	var x = document.getElementById("XD"); 
 	if(navigator.geolocation)
 	{
 		navigator.geolocation.getCurrentPosition(showPosition);

@@ -31,20 +31,23 @@ function readTextFile(file)
 	}
 	rawFile.send(null);
 }
-$.ajax({url: "../Text/bleh.txt", success: function(result){
-$("#test").html(result);
-}});
-//$('#test').load('https://drive.google.com/uc?export=view&id=1lf-0t0x2F1JPqp33PZOQGiQDDewB-8p8');
+//$.ajax({url: "../Text/bleh.txt", success: function(result){
+//$("#test").html(result);
+//}});
 
-//$('#test').load("../Text/bleh.txt");
 
 
 //event when resizes occurs
-$(window).resize(function()
+$(window).resize(async function()
 {
 	canvas[0].height = window.innerHeight;
 	canvas[0].width = window.innerWidth;
 });
+
+function ChangeHTMLOf(source,target)
+{
+	$(source).load(target);
+}
 
 function K()
 {
@@ -150,6 +153,7 @@ function i()
 
 function init()
 {
+	ChangeHTMLOf('#textWindow','MainPage.html');
 	renderer = new THREE.WebGLRenderer();
 	camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.01, 1000 );
 	camera.position.z = 130;

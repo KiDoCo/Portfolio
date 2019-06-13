@@ -17,7 +17,7 @@ footer {
 }
 
 body {
-	
+	position: relative;
 	background-color : black;
 }
 
@@ -40,25 +40,35 @@ body {
  
 .glcontainer{
 
-	overflow-x: hidden;
-	position : relative;
+	position:relative;
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+
 }
 
 .pagecontentgrid{
 	position: absolute;
 	display: grid; /* one percent */
-	grid-template-columns: 5vh 10vh 20vh 30vh 20vh 10vh 5vh; /* 7*/
-	grid-template-rows: 0vw 5vw  35vw 20vw 35vw  5vw 0vw;
-	background: rgba(114,186,94,0.1);
-
+	top : -1vw;
+	grid-template-columns: 1vw 32vw 34vw 16vw 16vw 1vw; /*5*/
+	grid-template-rows: 10vh 10vh auto auto auto auto 10vh; /* 8*/
+	
 }
 
 #textWindow{
-	background-color: #11111122;
-	grid-column-start: 3;
+
+	grid-row-start: 2;
+	grid-row-end : 5;
+	grid-column-start : 2;
 	grid-column-end: 5;
-	grid-row-start: 3;
-	grid-row-end: 5;
+	overflow-y:auto;
+	background: -webkit-linear-gradient(280deg,#0000F8,#00FF00);
+	width: 100vw;
+	height: 85vw;
+	-webkit-background-clip:text;
+	-webkit-text-fill-color: transparent;
+	background-color: #70707022;
 }
 
  
@@ -76,10 +86,11 @@ body {
 	box-shadow: 0px 1px 1.5px rgba(0,0,0,.2);
 	margin: auto;
 	/*Grid settings */			
-	grid-column-start: 5;
-	grid-column-end: 10;
-	grid-row-start: 1;
+	grid-column-start: 1;
+	grid-column-end: 5;
+	grid-row-start: 0;
 	grid-row-end: 2;
+	width: 100vw;
 	/* Text settings*/		
 	font-size : 32px;	
 	line-height: normal;
@@ -94,15 +105,17 @@ body {
 
 }
 
+
 #dropdown > ul {
     text-align:center;
+	position:relative;
 }
 
 #dropdown > ul > li {
 
     display:inline-block;
 
-    margin-left: 10px;       
+    margin-left: 2vw;       
 
     position: relative;
 
@@ -154,7 +167,7 @@ body {
 
     visibility: hidden;
 
-    padding: 2px 0 2px 0;
+    padding: 1vw 0 1vw 0;
 
     background-color: #000000;
 
@@ -162,7 +175,7 @@ body {
 
     position: absolute;
 
-    top: 60px;		
+    top: 7vw;		
 
     left: 5vw;
 
@@ -183,7 +196,7 @@ body {
     opacity: 1;
 
     top: 80px;	
-
+	width : 35vw;
 	background-color : #000000;
 
     visibility: visible;
@@ -196,11 +209,11 @@ body {
 
     display: block;
 
-    border-width: 15px;  
+    border-width: 15vw;  
 
-    top: -50px;
+    top: -50vw;
 
-    left: 50%;
+    left: 50vw;
 
     margin-left: -10px;
 
@@ -212,7 +225,7 @@ body {
 
 	font-size : 16px;
 	
-    padding: 16px 4px 16px 4px;
+    padding: 2vw 1vw 2vw 1vw;
 
     display: block;
 

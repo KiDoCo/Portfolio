@@ -10,6 +10,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Main Page</title>
 <link rel="icon" href="./Resources/Images/testbutton.jpg">
+<link href="./Resources/CSS/Remove.css" rel='stylesheet'></link>
 <link href='https://fonts.googleapis.com/css?family=Coming Soon' rel='stylesheet'>
 <link href="./Resources/CSS/ImageTextOverlay.css" type="text/css"rel="stylesheet">
 <link href="./Resources/CSS/Container.css" rel="stylesheet">
@@ -26,15 +27,17 @@
 	</div>
 </header>
 
-<body itemscope itemtype = "http://schema.org/Person" style="width: 100%;height: 100%; margin: 0vw;">
-<div class="pagecontentgrid">
+<body itemscope itemtype = "http://schema.org/Person" >
+
 <div class="glcontainer">
+<div class="pagecontentgrid">
+
 
 	<div id='dropdown'>
 
 		<ul>
 
-			<li class='active'><a href='index.html'><span>Home</span></a></li>
+			<li class='active'><a href="#" onclick=" ChangeHTMLOf('#textWindow','MainPage.html')"><span>Home</span></a></li>
 
 			<li class='active'><a href='#'><span>About Me</span></a>
 
@@ -44,7 +47,7 @@
 
 					<li class='has-sub'><a href="#"><span> This oesngirobdi</span></a></li>
 					
-					<li class='has-sub'><a href='Project.html' rel="nofollow"><span>PlayGround</span></a></li>
+					<li class='has-sub'><a href="#" onclick=" ChangeHTMLOf('#textWindow','Project.html')"><span>PlayGround</span></a></li>
 
 					<li class='has-sub'><a href='#'><span>Experience</span></a></li>
 
@@ -71,18 +74,21 @@
 			<li class='active'><a href='#'><span>Contact</span></a>
 		</ul>
 	</div> 
-	<div id="textWindow">
-	<h1>Welcome to my website</h1>
-	</div>
-</div>
-</div>
+	
+	<div id="textWindow"> </div>
 
+
+</div>
+</div>
 </body>
 
-<footer>
-<a href="Devlog.html"><h1> website devlog </h1></a>
-<h1>Copyright 2018 @ KiDoCo </h1>
+<footer >
+	<div>
+		<a href="Devlog.html"><h1> website devlog </h1></a>
+		<h1>Copyright 2018 @ KiDoCo </h1>
+	</div>
 </footer>
+
 <script src="./Resources/JS/three.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/Javascript" async="http://www.google-analytics.com/ga.js"></script>
