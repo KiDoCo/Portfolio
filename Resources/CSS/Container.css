@@ -1,34 +1,4 @@
 
-/* Header banner container */
-.container : header{
-	position : relative;
-	text-align: center;
-	font-family: "Courier New",Helvetica;
-	width: 30%;
-	height: 10%;
-	
-}
-/*Universal elements */
-
-
-footer {
-	text-align: center;
-	position: relative;
-	z-index: 2;
-}
-
-
-body {
-	
-	margin: 0;
-
-	position:relative;
-	overflow-x: hidden;
-	background-color : black;
-	z-index: 1;
-}
-
-
 .TextBackground{
 
     font-family: 'Coming Soon'; 
@@ -47,7 +17,7 @@ body {
 #glcontainer{
 
 	grid-row-start: 1;
-	grid-row-end : 8;
+	grid-row-end : 9;
 	background-color: #000000;
 	grid-column-start : 1;
 	grid-column-end: 7;
@@ -70,7 +40,7 @@ body {
 #textWindow{
 
 	grid-row-start: 3;
-	grid-row-end : 8;
+	grid-row-end : 9;
 	grid-column-start : 1;
 	grid-column-end: 6;
 	overflow-y:auto;
@@ -80,155 +50,7 @@ body {
 }
 
  
-#dropdown ul { margin: 0; padding: 0; list-style: none;}
 
-#dropdown li { margin: 0; padding: 0;}
-
-#dropdown a { margin: 0; padding: 0;text-decoration: none;}
-
-#dropdown {
-
-	font-family: Verdana;
-	height: 100%;
-	background-color: #000000; 
-	box-shadow: 0px 1px 1.5px rgba(0,0,0,.2);
-	margin: auto;
-	/*Grid settings */			
-	grid-column-start: 1;
-	grid-column-end: 5;
-	grid-row-start: 1;
-	grid-row-end: 2;
-	width: 100vw;
-	/* Text settings*/		
-	font-size : 1vw;	
-	line-height: normal;
-	text-align: center;
-
-	/*Border settings */
-	border : solid;
-	border-color : #0000FF;
-	border-right: none;
-	border-left: none;
-
-}
-
-
-#dropdown > ul {
-    text-align:center;
-	position:relative;
-	padding: 0.2vw;
-}
-
-#dropdown > ul > li {
-
-    display:inline-block;
-	
-    margin-left: 2vw;       
-
-    position: relative;
-
-}
-
-
-
-#dropdown > ul > li > a {
-
-
-    line-height: 4vh;		/* This bit chances the size of the text on the main heading */
-	color: rgba(95, 46, 255, 0.829);
-    padding:  1vw 6vw;		/* This is the padding between the different titles */
-
-    transition: color .15s;
-
-}
-
-#dropdown > ul ul > li > a > span {
-
-	color: rgba(95, 46, 255, 0.829);
-	font-size: 1vw;
-	overflow:hidden;
-	white-space: nowrap;
-}
-
-#dropdown > ul ul > li > a > span:hover 
-{
-	-webkit-text-fill-color: #00FF00;
-
-}
-
-#dropdown > ul > li > a:hover {color: #00FF00; }
-
-#dropdown > ul > li > a { text-decoration : none;}
-
-#dropdown > ul > li > ul { /*Dropdown effect window */
-
-    opacity: 0;
-
-    visibility: hidden;
-
-    padding: 1vh 0 1vh 0;
-
-    background-color: #000000;
-
-    text-align: left;  
-
-    position: absolute;
-
-    top: 2vh;		
-
-    left: 5vw;
-
-    width: 3vw;
-
-	transition: all .6s .2s;
-	
-	border-radius: 10px;
-	
-
-
-}
-
-#dropdown > ul > li:hover > ul {
-
-    opacity: 1;
-
-    top: 5vh;	
-	width : 12vw;
-	background-color : #000000;
-    visibility: visible;
-
-}
-
-#dropdown > ul > li > ul:before{
-
-    content: '';
-
-    display: inline-block;
-
-    border-width: 2vw;  
-
-    left: 5vw;
-
-    margin-left: -10px;
-
-}
-
-#dropdown ul ul > li{     
-
-    font-family: Verdana, 'Lucida Grande';
-
-	font-size : 1vw;
-	top: -2vh;
-    padding: 1vh 1vw 1vh 1vw;
-
-    display: block;
-
-	position: relative;
-    transition: background-color .1s;
-
-}
-
-#dropdown > ul ul > li > a { text-decoration : none;}
 
 
 @keyframes asdf{

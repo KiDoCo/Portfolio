@@ -6,3 +6,20 @@ video
 {
 	display: none;
 }
+
+footer {
+	text-align: center;
+	position: relative;
+	z-index: 2;
+}
+
+
+body {
+	
+	margin: 0;
+
+	position:relative;
+	overflow-x: hidden;
+	background-color : black;
+	z-index: 1;
+}
