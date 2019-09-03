@@ -68,3 +68,30 @@ function save()
 	gl.save();
 }
 
+function getLocation()
+{
+	var x = document.getElementById("XD"); 
+	if(navigator.geolocation)
+	{
+		navigator.geolocation.getCurrentPosition(showPosition);
+		return true;
+	}
+	else
+	{
+		x.innerHTML = "U browser no support geo, plz gime munnie";
+		return false;
+	}
+}
+
+function showPosition(position)
+{
+    var mapOptions = {
+		
+        center: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
+        zoom: 10,
+        mapTypeId: google.maps.MapTypeId.HYBRID
+    }
+	var map = new google.maps.Map(document.getElementById("XD"), mapOptions);
+	return true;
+}
+

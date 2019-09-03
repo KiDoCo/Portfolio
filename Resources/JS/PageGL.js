@@ -4,7 +4,7 @@ var increase = false;
 var boxarray = [];
 var style = 16;
 var initvalue = parseFloat(style);
-ChangeHTMLOf('#textWindow','MainPage.html');
+ChangeHTMLOf('#textWindow','HTML/MainPage.html');
 var G_gl = document.querySelector("#glcontainer").getContext("webgl");
 main();
 
