@@ -136,7 +136,7 @@ body {
 
 
     line-height: 4vh;		/* This bit chances the size of the text on the main heading */
-
+	color: rgba(95, 46, 255, 0.829);
     padding:  1vw 6vw;		/* This is the padding between the different titles */
 
     transition: color .15s;
@@ -145,7 +145,7 @@ body {
 
 #dropdown > ul ul > li > a > span {
 
-
+	color: rgba(95, 46, 255, 0.829);
 	font-size: 1vw;
 	overflow:hidden;
 	white-space: nowrap;
@@ -185,7 +185,7 @@ body {
 	
 	border-radius: 10px;
 	
-    box-shadow: 2px 1px 1px #0000FF56;
+
 
 }
 
