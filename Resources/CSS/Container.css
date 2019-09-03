@@ -47,8 +47,9 @@ body {
  
 #glcontainer{
 
-	grid-row-start: 2;
+	grid-row-start: 1;
 	grid-row-end : 8;
+	background-color: #000000;
 	grid-column-start : 1;
 	grid-column-end: 7;
 	width: 100%;
@@ -63,22 +64,20 @@ body {
 	padding: 0;
 	margin: 0;
 	grid-template-columns: 1vw 32vw 34vw 16vw 16vw 1vw; /*5*/
-	grid-template-rows: 10vh 10vh 20vh 20vh 20vh 10vh 10vh; /* 9*/
+	grid-template-rows: 5vh 2vh 13vh 20vh 20vh 20vh 10vh 10vh; /* 9*/
 	z-index: 2;
 }
 
 #textWindow{
 
-	grid-row-start: 2;
-	grid-row-end : 7;
-	grid-column-start : 2;
+	grid-row-start: 3;
+	grid-row-end : 8;
+	grid-column-start : 1;
 	grid-column-end: 6;
 	overflow-y:auto;
 	overflow-x: auto;
-	background: -webkit-linear-gradient(280deg,#0000F8,#00FF00);
-	-webkit-background-clip:text;
-	-webkit-text-fill-color: transparent;
-	background-color: #70707055;
+	-webkit-text-fill-color: #00FF00;
+	background-color: #4e5b6115;
 }
 
  
@@ -91,7 +90,7 @@ body {
 #dropdown {
 
 	font-family: Verdana;
-	height: 75px;
+	height: 100%;
 	background-color: #000000; 
 	box-shadow: 0px 1px 1.5px rgba(0,0,0,.2);
 	margin: auto;
@@ -102,7 +101,7 @@ body {
 	grid-row-end: 2;
 	width: 100vw;
 	/* Text settings*/		
-	font-size : 2vw;	
+	font-size : 1vw;	
 	line-height: normal;
 	text-align: center;
 
@@ -131,40 +130,31 @@ body {
 
 }
 
-#dropdown > ul > li:hover{
-	background-image:linear-gradient(to bottom, #00FF0054, #0000FF54);
-}
+
 
 #dropdown > ul > li > a {
 
-	background: -webkit-linear-gradient(280deg,#00FF00,#000056);
-	
-	-webkit-background-clip:text;
-	
-	-webkit-text-fill-color: transparent;
 
-    line-height: 70px;		/* This bit chances the size of the text on the main heading */
+    line-height: 4vh;		/* This bit chances the size of the text on the main heading */
 
-    padding:  6px 32px;		/* This is the padding between the different titles */
+    padding:  1vw 6vw;		/* This is the padding between the different titles */
 
     transition: color .15s;
 
 }
 
 #dropdown > ul ul > li > a > span {
-	background: -webkit-linear-gradient(280deg,#00FF00,#000018);
-	-webkit-background-clip:text;
-	-webkit-text-fill-color: transparent;
-	font-size: 26px;
+
+
+	font-size: 1vw;
 	overflow:hidden;
 	white-space: nowrap;
 }
 
 #dropdown > ul ul > li > a > span:hover 
 {
-	background: -webkit-linear-gradient(280deg,#00FF00,#00FF00);
-	-webkit-background-clip:text;
-	-webkit-text-fill-color: transparent;
+	-webkit-text-fill-color: #00FF00;
+
 }
 
 #dropdown > ul > li > a:hover {color: #00FF00; }
@@ -177,7 +167,7 @@ body {
 
     visibility: hidden;
 
-    padding: 1vw 0 1vw 0;
+    padding: 1vh 0 1vh 0;
 
     background-color: #000000;
 
@@ -185,13 +175,11 @@ body {
 
     position: absolute;
 
-    top: 7vw;		
+    top: 2vh;		
 
     left: 5vw;
 
-    margin-left: -6vw;
-
-    width: 14vw;
+    width: 3vw;
 
 	transition: all .6s .2s;
 	
@@ -205,10 +193,9 @@ body {
 
     opacity: 1;
 
-    top: 80px;	
-	width : 35vw;
+    top: 5vh;	
+	width : 12vw;
 	background-color : #000000;
-
     visibility: visible;
 
 }
@@ -217,13 +204,11 @@ body {
 
     content: '';
 
-    display: block;
+    display: inline-block;
 
-    border-width: 15vw;  
+    border-width: 2vw;  
 
-    top: -50vw;
-
-    left: 50vw;
+    left: 5vw;
 
     margin-left: -10px;
 
@@ -233,9 +218,9 @@ body {
 
     font-family: Verdana, 'Lucida Grande';
 
-	font-size : 16px;
-	
-    padding: 2vw 1vw 2vw 1vw;
+	font-size : 1vw;
+	top: -2vh;
+    padding: 1vh 1vw 1vh 1vw;
 
     display: block;
 

@@ -4,22 +4,17 @@ var increase = false;
 var boxarray = [];
 var style = 16;
 var initvalue = parseFloat(style);
-var G_gl;
+ChangeHTMLOf('#textWindow','MainPage.html');
+var G_gl = document.querySelector("#glcontainer").getContext("webgl");
 main();
 
 function main()
 {
-	ChangeHTMLOf('#textWindow','MainPage.html');
-	const canvas = document.querySelector("#glcontainer");
-	const gl = canvas.getContext("webgl");
-	if(gl == null)
-	{
-		alert("Unable to initialize WebGL");
-		return;
-	}
-	G_gl = gl;
-	gl.clearColor(0.5,0.0,0.0,1.0);
-	gl.clear(gl.COLOR_BUFFER_BIT);
+
+
+
+	G_gl.clearColor(0.0,0.0,0.0,1.0);
+	G_gl.clear(G_gl.COLOR_BUFFER_BIT);
 }
 
 
@@ -73,6 +68,7 @@ $(window).resize(function()
 
 function ChangeHTMLOf(source,target)
 {
+	console.log("Load different");
 	$(source).load(target);
 }
 
