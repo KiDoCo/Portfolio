@@ -17,7 +17,7 @@
 #glcontainer{
 
 	grid-row-start: 1;
-	grid-row-end : 9;
+	grid-row-end : 10;
 	background-color: #000000;
 	grid-column-start : 1;
 	grid-column-end: 7;
@@ -33,7 +33,7 @@
 	padding: 0;
 	margin: 0;
 	grid-template-columns: 1vw 32vw 34vw 16vw 16vw 1vw; /*5*/
-	grid-template-rows: 5vh 2vh 13vh 20vh 20vh 20vh 10vh 10vh; /* 9*/
+	grid-template-rows: 5vh 2vh 13vh 5vh 15vh 20vh 20vh 10vh 10vh; /* 9*/
 	z-index: 2;
 }
 
@@ -45,7 +45,7 @@
 #textWindow{
 
 	grid-row-start: 3;
-	grid-row-end : 9;
+	grid-row-end : 10;
 	grid-column-start : 1;
 	grid-column-end: 6;
 	overflow-y:auto;
@@ -71,7 +71,7 @@
 
 	#textWindow{
 		width: 100%;
-		grid-row-start: 4;
+		grid-row-start: 5;
 		margin: 0;
 
 
@@ -84,17 +84,18 @@
 	
 	#dropdown > ul > li{
 		font-size: 3vw;
-		padding: 0vh 0 1vh 0;
+		padding: 0vh 4vw 1vh 4vw;
 	}
 	#dropdown > ul > li > ul{
-		margin-left: 22vw;
+		margin-left: 35vw;
 
 		font-size: 2vw;
 		width: 5vw;
 	}
 	#dropdown > ul > li:hover > ul {
-		width: 30vw;
-		top:-2vh;
+		width: 35vw;
+		top:-1vh;
+		margin-left: 23vw;
 	}
 
 	#dropdown > ul ul > li > a > span{
