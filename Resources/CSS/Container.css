@@ -29,12 +29,17 @@
 .pagecontentgrid{
 	position: relative;
 	display: grid; /* one percent */
-	top : -1vw;
+	top : -1vh;
 	padding: 0;
 	margin: 0;
 	grid-template-columns: 1vw 32vw 34vw 16vw 16vw 1vw; /*5*/
 	grid-template-rows: 5vh 2vh 13vh 20vh 20vh 20vh 10vh 10vh; /* 9*/
 	z-index: 2;
+}
+
+.col-textWindow{
+	font-size: 2vw;
+	margin: 1vh 30vw 0 30vw;
 }
 
 #textWindow{
@@ -48,6 +53,59 @@
 	-webkit-text-fill-color: #00FF00;
 	background-color: #4e5b6115;
 }
+
+@media only screen and (max-width: 768px)
+{
+
+
+	#dropdown{
+		align-content: center;
+		width: 50vw;
+		height: 100%;
+		margin-left: 25vw;
+		grid-column-start: 1;
+		grid-column-end: 5;
+		grid-row-end: 4;
+	}
+
+	#textWindow{
+		width: 100%;
+		grid-row-start: 4;
+		margin: 0;
+
+
+	}
+
+	header{
+		height: 10vh;
+		font-size: 3vw;
+	}
+	
+	#dropdown > ul > li{
+		font-size: 3vw;
+		padding: 0vh 0 1vh 0;
+	}
+	#dropdown > ul > li > ul{
+		margin-left: 22vw;
+
+		font-size: 2vw;
+		width: 5vw;
+	}
+	#dropdown > ul > li:hover > ul {
+		width: 30vw;
+		top:-2vh;
+	}
+
+	#dropdown > ul ul > li > a > span{
+		font-size: 3vw;
+	}
+
+	p{
+		font-size: 5vw;
+	}
+}
+
+
 
  
 

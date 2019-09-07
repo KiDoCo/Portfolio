@@ -3,93 +3,96 @@
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="Description" content="Joonas Tuominen portfolio">
-<meta name="Author" content="Joonas Tuominen">
-<meta name="Keywords" content="html,CSS,Javascript, Three.js, jQuery,KiDoCo,Portfolio,Kajaani,Coder,Programmer,Joonas,Tuominen,Portfolio">
-<meta name="robots" content="noindex">
-<meta name="google-site-verification" content="g40bivj-CQ5e4OEg-TY2N9mec2MZq_Ul1hAY7osif04" />
-<meta name="viewport" content="width=device-width,heigth=device-height, initial-scale=1">
-<title>Portfolio</title>
-<link rel="icon" href="./Resources/Images/testbutton.jpg">
-<link href="./Resources/CSS/Remove.css" rel='stylesheet'></link>
-<link href='https://fonts.googleapis.com/css?family=Coming Soon' rel='stylesheet'>
-<link href="./Resources/CSS/Dropdown.css" rel="stylesheet">
-<link href="./Resources/CSS/ImageTextOverlay.css" type="text/css"rel="stylesheet">
-<link href="./Resources/CSS/Container.css" rel="stylesheet">
-<link href="./Resources/CSS/GLWindow.css" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta name="Description" content="Joonas Tuominen portfolio">
+	<meta name="Author" content="Joonas Tuominen">
+	<meta name="Keywords"
+		content="html,CSS,Javascript, Three.js, jQuery,KiDoCo,Portfolio,Kajaani,Coder,Programmer,Joonas,Tuominen,Portfolio">
+	<meta name="robots" content="noindex">
+	<meta name="google-site-verification" content="g40bivj-CQ5e4OEg-TY2N9mec2MZq_Ul1hAY7osif04" />
+	<meta name="viewport" content="width=device-width,heigth=device-height, initial-scale=1">
+	<title>Portfolio</title>
+	<link rel="icon" href="./Resources/Images/testbutton.jpg">
+
+	<link href='https://fonts.googleapis.com/css?family=Coming Soon' rel='stylesheet'>
+	<link href="./Resources/CSS/Dropdown.css" rel="stylesheet">
+	<link href="./Resources/CSS/ImageTextOverlay.css" type="text/css" rel="stylesheet">
+	<link href="./Resources/CSS/Container.css" rel="stylesheet">
+	<link href="./Resources/CSS/GLWindow.css" rel="stylesheet">
 
 </head>
 
-<header>
-	<div id = 'bleh'>
-		<div class="container">
-			<div class ="TextBackground" ><span style = "font-size: 48px"> Kauhee Työmaa</span> </div>
-			<div class = "TextBackground" > England is my city </div>
-			<p>Missä on tilipäivä</p>
-		</div>
-	</div>
+<header style="text-align: center">
+
+	<div class="TextBackground"><span style="font-size: 1vw"> Kauhee Työmaa</span> </div>
+	<div class="TextBackground"> England is my city </div>
+	<p>Missä on tilipäivä</p>
+
 </header>
 
-<body itemscope itemtype = "http://schema.org/Person" >
-<?php
+<body itemscope itemtype="http://schema.org/Person">
+	<?php
 Content-Type: "text/plain";
+echo "damn";
 ?>
-<div class="pagecontentgrid">
-<canvas id="glcontainer"></canvas>
+	<div class="pagecontentgrid">
+		<canvas id="glcontainer"></canvas>
 
-	<div id='dropdown'>
+		<div id='dropdown'>
 
-		<ul>
+			<ul>
 
-			<li class='active'><a href="#" onclick=" ChangeHTMLOf('#textWindow','HTML/MainPage.html')"><span>Home</span></a></li>
+				<li class='active'><a href="#"
+						onclick=" ChangeHTMLOf('#textWindow','HTML/MainPage.html')"><span>Home</span></a></li>
 
-			<li class='active'><a href='#'><span>About Me</span></a>
-
-				<ul>
-
-					<li class='first-child'><a href='#'><span>This War of mine</span></a></li>
-
-					<li class='has-sub'><a href="#"><span> This oesngirobdi</span></a></li>
-					
-					<li class='has-sub'><a href="#" onclick=" ChangeHTMLOf('#textWindow','HTML/Project.html')"><span>PlayGround</span></a></li>
-
-					<li class='has-sub'><a href='#'><span>Experience</span></a></li>
+				<li class='active'><a href='#'><span>About Me</span></a>
 
 					<ul>
 
+						<li class='first-child'><a href='#'><span>This War of mine</span></a></li>
+
+						<li class='has-sub'><a href="#"><span> This oesngirobdi</span></a></li>
+
+						<li class='has-sub'><a href="#"
+								onclick=" ChangeHTMLOf('#textWindow','HTML/Project.html')"><span>PlayGround</span></a>
+						</li>
+
+						<li class='has-sub'><a href='#'><span>Experience</span></a></li>
+
+						<ul>
+
+						</ul>
+
 					</ul>
 
-				</ul>
-			
-			<li class= 'active'><a href='#'><span>Projects</span></a>
+				<li class='active'><a href='#'><span>Projects</span></a>
 
-				<ul>
-				
-				<li class='first-child'><a href ='#'><span>Game Jam</span></a></li>
-				<li class='has-sub'><a href ='#'><span>School</span></a></li>
-				<li class='has-sub'><a href ='#'><span>Work environment</span></a></li>
-				
-				<ul>
-				
-				</ul>
-				
-				</ul>
-			
-			<li class='active'><a href='#'><span>Contact</span></a>
-		</ul>
-	</div> 
-	
-	<div id="textWindow"></div>
+					<ul>
+
+						<li class='first-child'><a href='#'><span>Game Jam</span></a></li>
+						<li class='has-sub'><a href='#'><span>School</span></a></li>
+						<li class='has-sub'><a href='#'><span>Work environment</span></a></li>
+
+						<ul>
+
+						</ul>
+
+					</ul>
+
+				<li class='active'><a href='#'><span>Contact</span></a>
+			</ul>
+		</div>
+
+		<div id="textWindow"></div>
 
 
 
-</div>
+	</div>
 
 </body>
 
 <footer>
-		<div style = "Position: relative;">
+	<div style="Position: relative;">
 		<h1><a href="HTML/Devlog.html"> website devlog </a></h1>
 		<h1>Copyright 2018 @ KiDoCo </h1>
 	</div>
@@ -98,4 +101,5 @@ Content-Type: "text/plain";
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script async type="text/Javascript" async="http://www.google-analytics.com/ga.js"></script>
 <script src="./Resources/JS/PageGL.js"></script>
+
 </html>

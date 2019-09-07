@@ -1,13 +1,14 @@
  
    h1 {
 	   background: -webkit-linear-gradient(280deg,#00FF00,#000018);
-	   -webkit-background-clip:text;
+      -webkit-background-clip:text;
+      background-clip: text;
 	   -webkit-text-fill-color: transparent;
    }
    
    p
    {
-	   font-size: 18px;
+	   font-size: 2vw;
    }
    
    a{

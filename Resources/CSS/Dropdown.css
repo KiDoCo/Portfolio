@@ -15,7 +15,7 @@
 	grid-column-start: 1;
 	grid-column-end: 5;
 	grid-row-start: 1;
-	grid-row-end: 2;
+	grid-row-end: 3;
 	width: 100vw;
 	/* Text settings*/		
 	font-size : 1vw;	
@@ -47,8 +47,6 @@
 
 }
 
-
-
 #dropdown > ul > li > a {
 
 
@@ -72,6 +70,7 @@
 {
 	-webkit-text-fill-color: #00FF00;
 
+
 }
 
 #dropdown > ul > li > a:hover {color: #00FF00; }
@@ -84,7 +83,7 @@
 
     visibility: hidden;
 
-    padding: 1vh 0 1vh 0;
+    padding: 0vh 0 0vh 0;
 
     background-color: #000000;
 
@@ -100,7 +99,7 @@
 
 	transition: all .6s .2s;
 	
-	border-radius: 10px;
+	border-radius: 1vw;
 	
 
 
@@ -131,19 +130,6 @@
 
 }
 
-#dropdown ul ul > li{     
 
-    font-family: Verdana, 'Lucida Grande';
-
-	font-size : 1vw;
-	top: -2vh;
-    padding: 1vh 1vw 1vh 1vw;
-
-    display: block;
-
-	position: relative;
-    transition: background-color .1s;
-
-}
 
 #dropdown > ul ul > li > a { text-decoration : none;}
