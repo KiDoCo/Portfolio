@@ -7,6 +7,10 @@ video
 	display: none;
 }
 
+p{
+	padding: 0 20vw 0 20vw;
+}
+
 footer {
 	text-align: center;
 	position: relative;

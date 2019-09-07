@@ -33,7 +33,7 @@
 	padding: 0;
 	margin: 0;
 	grid-template-columns: 1vw 32vw 34vw 16vw 16vw 1vw; /*5*/
-	grid-template-rows: 5vh 2vh 13vh 5vh 15vh 20vh 20vh 10vh 10vh; /* 9*/
+	grid-template-rows: 5vh 2vh 8vh 10vh 15vh 20vh 20vh 10vh 10vh; /* 9*/
 	z-index: 2;
 }
 
@@ -71,7 +71,7 @@
 
 	#textWindow{
 		width: 100%;
-		grid-row-start: 5;
+		grid-row-start: 4;
 		margin: 0;
 
 
@@ -84,10 +84,11 @@
 	
 	#dropdown > ul > li{
 		font-size: 3vw;
+		display: block;
 		padding: 0vh 4vw 1vh 4vw;
 	}
 	#dropdown > ul > li > ul{
-		margin-left: 35vw;
+		margin-left: 30vw;
 
 		font-size: 2vw;
 		width: 5vw;
@@ -95,15 +96,17 @@
 	#dropdown > ul > li:hover > ul {
 		width: 35vw;
 		top:-1vh;
-		margin-left: 23vw;
+		margin-left: 32vw;
+		z-index: 5;
 	}
 
 	#dropdown > ul ul > li > a > span{
 		font-size: 3vw;
 	}
 
-	p{
+	#textWindow > p{
 		font-size: 5vw;
+		padding: 0 5vw 0 5vw;
 	}
 }
 
