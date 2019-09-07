@@ -62,7 +62,8 @@
 		align-content: center;
 		width: 50vw;
 		height: 100%;
-		margin-left: 25vw;
+
+		padding: 0 30vw 0 25vw;
 		grid-column-start: 1;
 		grid-column-end: 5;
 		grid-row-end: 4;
