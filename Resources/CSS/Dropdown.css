@@ -17,9 +17,10 @@
 	grid-row-start: 1;
 	grid-row-end: 3;
 	width: 100vw;
+
 	/* Text settings*/		
-	font-size : 1vw;	
-	line-height: normal;
+	font-size : 1.5vw;	
+
 	text-align: center;
 
 	/*Border settings */
@@ -34,14 +35,12 @@
 #dropdown > ul {
     text-align:center;
 	position:relative;
-	padding: 0.2vw;
+	padding: 0.5vw;
 }
 
 #dropdown > ul > li {
 
     display:inline-block;
-	
-    margin-left: 2vw;       
 
     position: relative;
 
@@ -50,32 +49,16 @@
 #dropdown > ul > li > a {
 
 
-    line-height: 4vh;		/* This bit chances the size of the text on the main heading */
+    line-height: 5vh;		/* This bit chances the size of the text on the main heading */
 	color: rgba(95, 46, 255, 0.829);
-    padding:  1vw 6vw;		/* This is the padding between the different titles */
-
+    padding:  0 3vw;		/* This is the padding between the different titles */
+	text-decoration : none;
     transition: color .15s;
-
-}
-
-#dropdown > ul ul > li > a > span {
-
-	color: rgba(95, 46, 255, 0.829);
-	font-size: 1vw;
-	overflow:hidden;
-	white-space: nowrap;
-}
-
-#dropdown > ul ul > li > a > span:hover 
-{
-	-webkit-text-fill-color: #00FF00;
-
 
 }
 
 #dropdown > ul > li > a:hover {color: #00FF00; }
 
-#dropdown > ul > li > a { text-decoration : none;}
 
 #dropdown > ul > li > ul { /*Dropdown effect window */
 
@@ -83,17 +66,15 @@
 
     visibility: hidden;
 
-    padding: 0vh 0 0vh 0;
-
     background-color: #000000;
 
     text-align: left;  
 
     position: absolute;
 
-    top: 2vh;		
+    top: 6vh;		
 
-    left: 5vw;
+    left: 1vw;
 
     width: 3vw;
 
@@ -108,11 +89,11 @@
 #dropdown > ul > li:hover > ul {
 
     opacity: 1;
-
-    top: 5vh;	
-	width : 12vw;
+    top: 6vh;	
+	width : 11vw;
 	background-color : #000000;
     visibility: visible;
+	margin-left: 1vw;
 
 }
 
@@ -120,16 +101,30 @@
 
     content: '';
 
-    display: inline-block;
-
-    border-width: 2vw;  
-
-    left: 5vw;
+    display: block;
 
     margin-left: -10px;
 
 }
 
+#dropdown > ul ul > li{
+	padding-bottom: 1vh;
+	padding-top: 0vh;
+	padding-left: 1vw;
+}
 
+#dropdown > ul ul > li > a > span {
+
+	color: rgba(95, 46, 255, 0.829);
+	font-size: 1vw;
+
+	white-space: nowrap;
+}
+
+#dropdown > ul ul > li > a > span:hover 
+{
+	-webkit-text-fill-color: #00FF00;
+
+}
 
 #dropdown > ul ul > li > a { text-decoration : none;}
