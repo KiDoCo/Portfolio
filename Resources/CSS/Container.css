@@ -26,6 +26,11 @@
 	z-index: -5;
 }
 
+#glcontainerheader{
+	width: 100%;
+	height: 25%;
+}
+
 .pagecontentgrid{
 	position: relative;
 	display: grid; /* one percent */
